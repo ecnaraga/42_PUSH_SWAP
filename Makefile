@@ -41,6 +41,9 @@ UTILS_SRCS      	=   ft_atoi_mode_only_digit.c \
 	   					lst_utils.c \
 	   					free.c
 
+BONUS_DIR			=	bonus/
+BONUS_SRCS			=	checker.c
+
 ############################# HANDLE DIRECTORIES ##############################
 
 SRCS_DIR          		=     srcs/

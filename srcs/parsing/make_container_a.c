@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	ft_check_input(t_cont *cont, int bonus)
+void	ft_check_input(t_cont_push_swap *cont, int bonus)
 {
-	t_lst_two	*lst;
-	t_lst_two	*lst_next;
+	t_lst_two_push_swap	*lst;
+	t_lst_two_push_swap	*lst_next;
 	int			i;
 
 	lst = cont->first;
@@ -41,11 +41,11 @@ void	ft_check_input(t_cont *cont, int bonus)
 		ft_free_ok(cont, NULL);
 }
 
-t_cont	*ft_make_cont1(int ac, char **av, t_cont *cont, int bonus)
+t_cont_push_swap	*ft_make_cont1(int ac, char **av, t_cont_push_swap *cont, int bonus)
 {
 	int			i;
 	long int	nb;
-	t_lst_two	*new;
+	t_lst_two_push_swap	*new;
 
 	i = 1;
 	nb = ft_atoi_digit(av[i]);
@@ -65,11 +65,11 @@ t_cont	*ft_make_cont1(int ac, char **av, t_cont *cont, int bonus)
 	return (cont);
 }
 
-t_cont	*ft_make_cont2(char **av, t_cont *cont, int bonus)
+t_cont_push_swap	*ft_make_cont2(char **av, t_cont_push_swap *cont, int bonus)
 {
 	int			i;
 	long int	nb;
-	t_lst_two	*new;
+	t_lst_two_push_swap	*new;
 	char		**array;
 
 	array = ft_split(av[1], ' ');

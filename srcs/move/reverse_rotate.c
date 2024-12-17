@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-int	ft_reverse_rotate(t_cont *cont, char *order)
+int	ft_reverse_rotate(t_cont_push_swap *cont, char *order)
 {
-	t_lst_two	*tmp1;
-	t_lst_two	*tmp2;
+	t_lst_two_push_swap	*tmp1;
+	t_lst_two_push_swap	*tmp2;
 
 	if (!cont->first || cont->size == 1)
 		return (0);
@@ -32,7 +32,7 @@ int	ft_reverse_rotate(t_cont *cont, char *order)
 	return (1);
 }
 
-int	ft_reverse_rotate_r(t_cont *cont_a, t_cont *cont_b, int write)
+int	ft_reverse_rotate_r(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int write)
 {
 	if (cont_a->first)
 		ft_reverse_rotate(cont_a, NULL);

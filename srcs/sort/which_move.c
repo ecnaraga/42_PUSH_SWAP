@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-void	ft_set_cost_a(t_lst_two *pile_a, int size, int i)
+void	ft_set_cost_a(t_lst_two_push_swap *pile_a, int size, int i)
 {
 	if (i <= size / 2)
 	{
@@ -26,10 +26,10 @@ void	ft_set_cost_a(t_lst_two *pile_a, int size, int i)
 	}
 }
 
-t_lst_two	*ft_maj_pile_a(t_lst_two *pile_b, t_cont *cont_a)
+t_lst_two_push_swap	*ft_maj_pile_a(t_lst_two_push_swap *pile_b, t_cont_push_swap *cont_a)
 {
-	t_lst_two	*tmp;
-	t_lst_two	*maj;
+	t_lst_two_push_swap	*tmp;
+	t_lst_two_push_swap	*maj;
 	int			i;
 
 	i = 0;
@@ -49,7 +49,7 @@ t_lst_two	*ft_maj_pile_a(t_lst_two *pile_b, t_cont *cont_a)
 	return (maj);
 }
 
-void	ft_set_cost_b(t_lst_two *pile_b, t_lst_two *maj, int size, int i)
+void	ft_set_cost_b(t_lst_two_push_swap *pile_b, t_lst_two_push_swap *maj, int size, int i)
 {
 	if (i <= size / 2)
 	{
@@ -63,11 +63,11 @@ void	ft_set_cost_b(t_lst_two *pile_b, t_lst_two *maj, int size, int i)
 	}
 }
 
-t_lst_two	*ft_look_best_move(t_cont *cont_a, t_cont *cont_b)
+t_lst_two_push_swap	*ft_look_best_move(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b)
 {
-	t_lst_two	*tmp;
-	t_lst_two	*best;
-	t_lst_two	*maj;
+	t_lst_two_push_swap	*tmp;
+	t_lst_two_push_swap	*best;
+	t_lst_two_push_swap	*maj;
 	int			i;
 
 	i = 0;

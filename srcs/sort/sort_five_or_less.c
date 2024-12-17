@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-t_lst_two	*get_min_five(t_cont *cont, int size)
+t_lst_two_push_swap	*get_min_five(t_cont_push_swap *cont, int size)
 {
 	int			i;
 	int			j;
-	t_lst_two	*tmp;
-	t_lst_two	*min;
+	t_lst_two_push_swap	*tmp;
+	t_lst_two_push_swap	*min;
 
 	i = 0;
 	j = 0;
@@ -38,7 +38,7 @@ t_lst_two	*get_min_five(t_cont *cont, int size)
 	return (min);
 }
 
-void	sort_three(t_cont *cont, int *cost)
+void	sort_three(t_cont_push_swap *cont, int *cost)
 {
 	if (cont->first->next->data > cont->first->data
 		&& cont->first->next->data > cont->last->data)
@@ -53,9 +53,9 @@ void	sort_three(t_cont *cont, int *cost)
 		*cost += ft_swap(cont, "sa");
 }
 
-void	ft_sort_five(t_cont *cont_a, t_cont *cont_b, int size, int *cost)
+void	ft_sort_five(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int size, int *cost)
 {
-	t_lst_two	*min;
+	t_lst_two_push_swap	*min;
 	int			i;
 
 	i = 0;

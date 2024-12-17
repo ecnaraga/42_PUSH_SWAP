@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-t_lst_two	*ft_get_next_min(t_cont *cont)
+t_lst_two_push_swap	*ft_get_next_min(t_cont_push_swap *cont)
 {
-	t_lst_two	*min;
+	t_lst_two_push_swap	*min;
 
 	min = NULL;
 	while (cont->first)
@@ -26,9 +26,9 @@ t_lst_two	*ft_get_next_min(t_cont *cont)
 	return (min);
 }
 
-void	ft_set_index(t_cont *cont)
+void	ft_set_index(t_cont_push_swap *cont)
 {
-	t_lst_two	*tmp;
+	t_lst_two_push_swap	*tmp;
 	int			i;
 
 	i = 0;

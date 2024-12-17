@@ -10,17 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 int	main(int ac, char **av)
 {
-	t_cont	*cont_a;
+	t_cont_push_swap	*cont_a;
 	int		i;
 
 	i = 0;
 	if (ac < 2)
 		exit(0);
-	cont_a = malloc(sizeof(t_cont));
+	cont_a = malloc(sizeof(t_cont_push_swap));
 	if (!cont_a)
 		ft_error(cont_a, NULL, NULL);
 	cont_a->first = NULL;

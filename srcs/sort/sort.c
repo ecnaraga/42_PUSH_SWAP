@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-int	first_push_b(t_cont *cont_a, t_cont *cont_b, int max, int size)
+int	first_push_b(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int max, int size)
 {
 	int	cost;
 
@@ -28,9 +28,9 @@ int	first_push_b(t_cont *cont_a, t_cont *cont_b, int max, int size)
 	return (cost);
 }
 
-void	ft_sort_by_rotate(t_cont *cont_a, int *cost, int min)
+void	ft_sort_by_rotate(t_cont_push_swap *cont_a, int *cost, int min)
 {
-	t_lst_two	*lst;
+	t_lst_two_push_swap	*lst;
 	int			i;
 
 	lst = cont_a->first;
@@ -50,10 +50,10 @@ void	ft_sort_by_rotate(t_cont *cont_a, int *cost, int min)
 			*cost += ft_rotate(cont_a, "ra");
 }
 
-void	ft_final_sort(t_cont *cont_a, t_cont *cont_b, int *cost)
+void	ft_final_sort(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int *cost)
 {
-	t_lst_two	*best;
-	t_lst_two	*maj;
+	t_lst_two_push_swap	*best;
+	t_lst_two_push_swap	*maj;
 
 	while (cont_b->size >= 1)
 	{
@@ -76,7 +76,7 @@ void	ft_final_sort(t_cont *cont_a, t_cont *cont_b, int *cost)
 	ft_sort_by_rotate(cont_a, cost, 0);
 }
 
-void	ft_sort_six_or_plus(t_cont *cont_a, t_cont *cont_b, int *cost)
+void	ft_sort_six_or_plus(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int *cost)
 {
 	int	size;
 	int	max;
@@ -94,13 +94,13 @@ void	ft_sort_six_or_plus(t_cont *cont_a, t_cont *cont_b, int *cost)
 	ft_final_sort(cont_a, cont_b, cost);
 }
 
-void	ft_sort_list(t_cont *cont_a)
+void	ft_sort_list(t_cont_push_swap *cont_a)
 {
-	t_cont	*cont_b;
+	t_cont_push_swap	*cont_b;
 	int		cost;
 
 	cost = 0;
-	cont_b = malloc(sizeof(t_cont));
+	cont_b = malloc(sizeof(t_cont_push_swap));
 	if (!cont_b)
 		ft_error(cont_a, NULL, NULL);
 	cont_b->first = NULL;

@@ -10,13 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
-t_lst_two	*lst_two_addnew_pushswap(long int data)
+t_lst_two_push_swap	*lst_two_addnew_pushswap(long int data)
 {
-	t_lst_two	*new;
+	t_lst_two_push_swap	*new;
 
-	new = (t_lst_two *)malloc(sizeof(t_lst_two));
+	new = (t_lst_two_push_swap *)malloc(sizeof(t_lst_two_push_swap));
 	if (!new)
 		return (NULL);
 	new->prev = NULL;
@@ -28,7 +28,7 @@ t_lst_two	*lst_two_addnew_pushswap(long int data)
 	return (new);
 }
 
-void	lst_two_addback_pushswap(t_cont *cont, t_lst_two *new)
+void	lst_two_addback_pushswap(t_cont_push_swap *cont, t_lst_two_push_swap *new)
 {
 	if (cont->first->next == NULL)
 	{
@@ -43,9 +43,9 @@ void	lst_two_addback_pushswap(t_cont *cont, t_lst_two *new)
 	cont->last = new;
 }
 
-int	lst_two_size_pushswap(t_cont *cont)
+int	lst_two_size_pushswap(t_cont_push_swap *cont)
 {
-	t_lst_two	*lst;
+	t_lst_two_push_swap	*lst;
 	int			count;
 
 	lst = cont->first;

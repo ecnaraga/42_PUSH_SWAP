@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	ft_write_order(int write, char *order)
 {
@@ -18,7 +18,7 @@ void	ft_write_order(int write, char *order)
 		ft_printf("%s\n", order);
 }
 
-void	ft_set_cont_first(t_cont *cont, t_lst_two *tmp2)
+void	ft_set_cont_push_swap_first(t_cont_push_swap *cont, t_lst_two_push_swap *tmp2)
 {
 	if (cont->size > 1)
 	{
@@ -32,10 +32,10 @@ void	ft_set_cont_first(t_cont *cont, t_lst_two *tmp2)
 	}
 }
 
-int	ft_push_a(t_cont *cont_a, t_cont *cont_b, int write)
+int	ft_push_a(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int write)
 {
-	t_lst_two	*tmp1;
-	t_lst_two	*tmp2;
+	t_lst_two_push_swap	*tmp1;
+	t_lst_two_push_swap	*tmp2;
 
 	if (!cont_b->first || cont_b->size == 0)
 		return (0);
@@ -48,16 +48,16 @@ int	ft_push_a(t_cont *cont_a, t_cont *cont_b, int write)
 		tmp1->prev = cont_a->first;
 	else
 		cont_a->last = cont_a->first;
-	ft_set_cont_first(cont_b, tmp2);
+	ft_set_cont_push_swap_first(cont_b, tmp2);
 	cont_b->size -= 1;
 	cont_a->size += 1;
 	return (1);
 }
 
-int	ft_push_b(t_cont *cont_a, t_cont *cont_b, int write)
+int	ft_push_b(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, int write)
 {
-	t_lst_two	*tmp1;
-	t_lst_two	*tmp2;
+	t_lst_two_push_swap	*tmp1;
+	t_lst_two_push_swap	*tmp2;
 
 	if (!cont_a->first || cont_a->size == 0)
 		return (0);
@@ -70,7 +70,7 @@ int	ft_push_b(t_cont *cont_a, t_cont *cont_b, int write)
 		tmp1->prev = cont_b->first;
 	else
 		cont_b->last = cont_b->first;
-	ft_set_cont_first(cont_a, tmp2);
+	ft_set_cont_push_swap_first(cont_a, tmp2);
 	cont_b->size += 1;
 	cont_a->size -= 1;
 	return (1);

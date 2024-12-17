@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/push_swap.h"
+#include "../../include/push_swap.h"
 
 void	*ft_free_array(char **array)
 {
@@ -26,9 +26,9 @@ void	*ft_free_array(char **array)
 	return (NULL);
 }
 
-void	*ft_free_lst(t_lst_two *lst)
+void	*ft_free_lst(t_lst_two_push_swap *lst)
 {
-	t_lst_two	*tmp;
+	t_lst_two_push_swap	*tmp;
 
 	while (lst)
 	{
@@ -39,7 +39,7 @@ void	*ft_free_lst(t_lst_two *lst)
 	return (NULL);
 }
 
-void	ft_error(t_cont *cont_a, t_cont *cont_b, char **array)
+void	ft_error(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, char **array)
 {
 	ft_putstr_fd("Error\n", 2);
 	if (cont_a)
@@ -55,7 +55,7 @@ void	ft_error(t_cont *cont_a, t_cont *cont_b, char **array)
 	exit(1);
 }
 
-void	ft_free_ok(t_cont *cont_a, t_cont *cont_b)
+void	ft_free_ok(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b)
 {
 	if (cont_a->first)
 		ft_free_lst(cont_a->first);

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include_bonus/checker.h"
+#include "../../include_bonus/checker.h"
 
-int	ft_do_line(t_cont *cont_a, t_cont *cont_b, char *line)
+int	ft_do_line(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b, char *line)
 {
 	if (ft_strcmp(line, "pa\n") == 0)
 		ft_push_a(cont_a, cont_b, 0);
@@ -41,9 +41,9 @@ int	ft_do_line(t_cont *cont_a, t_cont *cont_b, char *line)
 	return (0);
 }
 
-void	ft_final_check(t_cont *cont_a, t_cont *cont_b)
+void	ft_final_check(t_cont_push_swap *cont_a, t_cont_push_swap *cont_b)
 {
-	t_lst_two	*tmp;
+	t_lst_two_push_swap	*tmp;
 	int			i;
 
 	i = 0;
@@ -69,14 +69,14 @@ void	ft_final_check(t_cont *cont_a, t_cont *cont_b)
 	ft_free_ok(cont_a, cont_b);
 }
 
-void	checker(t_cont *cont_a)
+void	checker(t_cont_push_swap *cont_a)
 {
 	char	*line;
 	int		check;
-	t_cont	*cont_b;
+	t_cont_push_swap	*cont_b;
 
 	check = 0;
-	cont_b = malloc(sizeof(t_cont));
+	cont_b = malloc(sizeof(t_cont_push_swap));
 	if (!cont_b)
 		ft_error(cont_a, NULL, NULL);
 	cont_b->first = NULL;
@@ -100,13 +100,13 @@ void	checker(t_cont *cont_a)
 
 int	main(int ac, char **av)
 {
-	t_cont	*cont_a;
+	t_cont_push_swap	*cont_a;
 	int		i;
 
 	i = 0;
 	if (ac < 2)
 		exit(0);
-	cont_a = malloc(sizeof(t_cont));
+	cont_a = malloc(sizeof(t_cont_push_swap));
 	if (!cont_a)
 		ft_error(cont_a, NULL, NULL);
 	cont_a->first = NULL;
