@@ -1,9 +1,10 @@
 # 42_PUSH_SWAP
 
 Goal
+
     - Mandatory : Write and adapt a sorting algorythm minimizing the number of operations to sort a stack of int, using 2 stacks maximum
     - Bonus : Write a checker program that takes the same stack than above and apply the operations realized to check if the stack is sorted at the end of the push_swap program
-
+    
 Launch
 
     - Compile with the makefile
